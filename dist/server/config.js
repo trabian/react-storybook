@@ -17,16 +17,8 @@ exports.default = function (baseConfig, configDir) {
 
   // if user has a .babelrc file in current directory
   // use that to extend webpack configurations
-  if (_fs2.default.existsSync('./.babelrc')) {
-    var content = _fs2.default.readFileSync('./.babelrc', 'utf-8');
-    try {
-      var babelrc = _cjson2.default.parse(content);
-      config.module.loaders[0].query = babelrc;
-    } catch (e) {
-      logger.error('=> Error parsing .babelrc file: ' + e.message);
-      throw e;
-    }
-  }
+  var babelrc = (0, _utils.readConfigFile)('./.babelrc');
+  config.module.loaders[0].query = babelrc;
 
   // Check whether a config.js file exists inside the storybook
   // config directory and throw an error if it's not.
@@ -65,9 +57,7 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
-var _cjson = require('cjson');
-
-var _cjson2 = _interopRequireDefault(_cjson);
+var _utils = require('./utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
