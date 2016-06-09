@@ -23,7 +23,6 @@ const config = {
     publicPath: '/static/',
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   module: {

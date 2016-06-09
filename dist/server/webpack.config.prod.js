@@ -34,7 +34,7 @@ var config = {
   },
   plugins: [new _webpack2.default.DefinePlugin({ 'process.env.NODE_ENV': '"production"' }), new _webpack2.default.optimize.UglifyJsPlugin({
     compress: { warnings: false }
-  }), new _webpack2.default.optimize.OccurenceOrderPlugin()],
+  })],
   module: {
     loaders: [{
       test: /\.jsx?$/,

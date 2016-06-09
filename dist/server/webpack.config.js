@@ -27,7 +27,7 @@ var config = {
     filename: '[name].bundle.js',
     publicPath: '/static/'
   },
-  plugins: [new _webpack2.default.optimize.OccurenceOrderPlugin(), new _webpack2.default.HotModuleReplacementPlugin()],
+  plugins: [new _webpack2.default.HotModuleReplacementPlugin()],
   module: {
     loaders: [{
       test: /\.jsx?$/,

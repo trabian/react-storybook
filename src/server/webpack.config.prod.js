@@ -24,7 +24,6 @@ const config = {
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false },
     }),
-    new webpack.optimize.OccurenceOrderPlugin(),
   ],
   module: {
     loaders: [
